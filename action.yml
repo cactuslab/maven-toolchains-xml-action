@@ -1,0 +1,15 @@
+name: 'Generate toolchains.xml for Maven builds'
+description: 'Create and customize ~/.m2/toolchains.xml'
+branding:
+  icon: feather
+  color: orange
+inputs:
+  toolchains:
+    description: 'JSON array of toolchains to add to toolchains.xml'
+    required: true
+  outputFile:
+    description: 'Path to generated file, default is ~/.m2/toolchains.xml'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
