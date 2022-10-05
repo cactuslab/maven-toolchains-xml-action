@@ -12,7 +12,7 @@ jobs:
   build: # make sure build/ci work properly
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.1
+      - uses: actions/checkout@v3.1.0
       - run: |
           curl -f https://get.pnpm.io/v6.14.js | node - add --global pnpm@6
           pnpm install
@@ -21,7 +21,7 @@ jobs:
   test-basic:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.1
+      - uses: actions/checkout@v3.1.0
       - uses: ./
         with:
           toolchains: '[{"jdkVersion": "$((steps.setupJava.outputs.version))", "jdkHome": "$((steps.setupJava.outputs.path))"}]'
@@ -31,7 +31,7 @@ jobs:
   test-expanded:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.1
+      - uses: actions/checkout@v3.1.0
       - uses: ./
         with:
           toolchains: '[{"jdkVersion": "1.8", "provides": {"vendor": "temurin"}, "jdkHome": "/java/8", "configuration": {"extra": "read all about it"}}]'
@@ -42,7 +42,7 @@ jobs:
   test-filepath:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.1
+      - uses: actions/checkout@v3.1.0
       - uses: ./
         with:
           outputFile: custom.xml
@@ -52,7 +52,7 @@ jobs:
   test-env-filepath:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3.0.1
+      - uses: actions/checkout@v3.1.0
       - uses: ./
         with:
           outputFile: $GITHUB_WORKSPACE/custom.xml
