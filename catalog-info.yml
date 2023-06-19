@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: maven-toolchains-xml-action
+  description: |
+    Github Action to create Maven toolchains
+  annotations:
+    github.com/project-slug: Tradeshift/maven-toolchains-xml-action
+  tags:
+    - github-action
+    - nodejs
+    - fork
+spec:
+  type: library
+  owner: sre
+  lifecycle: production
