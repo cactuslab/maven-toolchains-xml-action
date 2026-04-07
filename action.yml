@@ -11,5 +11,5 @@ inputs:
     description: 'Path to generated file, default is ~/.m2/toolchains.xml'
     required: false
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'

@@ -1,8 +1,11 @@
 import * as core from '@actions/core'
 import path from 'path'
 import fs from 'fs'
+import { fileURLToPath } from 'url'
 import { DOMParser, XMLSerializer } from 'xmldom'
 import format from 'xml-formatter'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export function getToolchainsTemplate(): Document {
 	return getTemplate('../template', 'toolchains.xml')

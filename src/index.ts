@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-import * as settings from './settings'
+import * as settings from './settings.js'
 import os from 'os'
 import path from 'path'
 import fs from 'fs'
