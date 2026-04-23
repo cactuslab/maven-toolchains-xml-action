@@ -14,3 +14,8 @@
 ### Major Changes
 
 - Update to node 24
+
+## 3.0.1
+### Patch Changes
+
+- Fix broken build
